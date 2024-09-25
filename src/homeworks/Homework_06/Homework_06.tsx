@@ -30,7 +30,7 @@ function Homework_06() {
     
 return (
     <div className="homework-06-wrapper">
-        {listItems}
+         {listItems}
     </div>
 );
 
