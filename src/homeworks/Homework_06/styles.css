@@ -9,8 +9,8 @@
 .card-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 500px;
+    gap: 15px;
+    width: 300px;
     height: fit-content;
     border: 2px solid black;
     border-radius: 6px;
@@ -26,12 +26,4 @@
 
 .card-info {
     font-size: 24px;
-}
-
-.user_card_avatar {
-    width: 200px;
-    height: 200px;
-    border: solid 1px;
-    border-radius: 50%;
-    background-color: white;
 }
