@@ -22,9 +22,9 @@
     color: #000000;
     font-size: 24px;
     font-weight: normal;
-  }
+}
 
-  .feedback-wrapper {
+.feedback-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,23 +37,50 @@
     padding: 30px;
     background-color: rgb(26, 35, 53);
     color: white;
-  }
+}
   
-  .feedback-control {
+.feedback-control {
     display: flex;
     align-items: center;
     gap: 20px;
     width: 100%;
-  }
+}
   
-  .buttonwithcount-container {
+.buttonwithcount-container {
     display: flex;
     align-items: center;
     gap: 10px;
     width: 100%;
-  }
+}
   
-  .count {
+.count {
     font-size: 40px;
     color: white;
-  }
+}
+
+.succes-modal-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+  
+.modal-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+  
+  .modal-info {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: purple;
+}
+  
+.modal-icon {
+    width: 200px;
+    height: 200px;
+}
