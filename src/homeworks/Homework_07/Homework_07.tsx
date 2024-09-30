@@ -41,10 +41,9 @@ function Homework_07() {
   };
 
   const openModal = (): void => {
-    // setIsModal
   }
+  
   const closeModal = (): void => {
-    // setIsModal
   }
 
   return (
