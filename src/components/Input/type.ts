@@ -1,9 +1,9 @@
-export type InputTypes = "checkbox" | "email" | "number" | "password" | "radio" | "search" | "tel" | "text" | "time" | "url";
+import { HTMLInputTypeAttribute } from "react";
 
 export interface InputProps {
-    id: string;
-    name: string;
-    type?: InputTypes;
-    placeholder: string;
-    label: string;
+  id: string;
+  name: string;
+  type?: HTMLInputTypeAttribute | undefined;
+  placeholder: string;
+  label?: string;
 }

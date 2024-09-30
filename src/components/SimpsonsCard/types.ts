@@ -1,9 +1,8 @@
-// export type AvatarTypes = "file" | "hidden" | "image" | "url";
-
-export interface CardProps {
+export interface SimpsonsCardProps {
     firstName: string;
     lastName: string;
     avatar: string;
     job: string;
-    hobby: string;
-}
+    hobby?: string;
+  }
+  
