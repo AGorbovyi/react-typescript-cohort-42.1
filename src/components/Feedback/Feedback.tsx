@@ -1,31 +1,15 @@
-// import { useState } from "react";
+import Button from "components/Button/Button";
 
-import Button from "../Button/Button";
 import { FeedbackProps } from "./types";
-
 import "./styles.css";
 
-function Feedback({ likes, dislikes, onLike, onDislike, resetResults }: FeedbackProps) {
-  // const [likes, setLikes] = useState<number>(0);
-  // const [dislikes, setDislikes] = useState<number>(0);
-
-  // const onLike = () => {
-  //   setLikes((prevValue: number) => {
-  //     return prevValue + 1;
-  //   });
-  // };
-
-  // const onDislike = () => {
-  //   setDislikes((prevValue: number) => {
-  //     return prevValue + 1;
-  //   });
-  // };
-
-  // const resetResults = () => {
-  //   setLikes(0);
-  //   setDislikes(0);
-  // };
-
+function Feedback({
+  likes,
+  dislikes,
+  onDislike,
+  onLike,
+  resetResults,
+}: FeedbackProps) {
   return (
     <div className="feedback-wrapper">
       <div className="feedback-control">

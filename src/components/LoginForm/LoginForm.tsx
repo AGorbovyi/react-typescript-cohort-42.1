@@ -22,7 +22,7 @@ function LoginForm() {
           type="password"
         />
       </div>
-      <Button type="submit" name="Login" />
+      <Button onClick={() => {}} type="submit" name="Login" />
     </form>
   );
 }
