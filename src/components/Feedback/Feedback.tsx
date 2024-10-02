@@ -1,7 +1,7 @@
 import Button from "components/Button/Button";
 
 import { FeedbackProps } from "./types";
-import "./styles.css";
+import { FeedbackWrapper, } from "./styles";
 
 function Feedback({
   likes,
@@ -11,7 +11,7 @@ function Feedback({
   resetResults,
 }: FeedbackProps) {
   return (
-    <div className="feedback-wrapper">
+    <FeedbackWrapper>
       <div className="feedback-control">
         <div className="buttonwithcount-container">
           <Button name="Like" onClick={onLike} />
@@ -23,7 +23,7 @@ function Feedback({
         </div>
       </div>
       <Button name="Reset Results" onClick={resetResults} />
-    </div>
+    </FeedbackWrapper>
   );
 }
 
