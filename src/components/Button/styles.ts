@@ -12,12 +12,14 @@ export const ButtonComponent = styled.button<ButtonComponentStyleProps>`
   height: 70px;
   border: none;
   background-color: ${({ $isDeleteVariant, disabled }) => {
-    if ($isDeleteVariant) {
-      return colors.ERROR;
-    } else if (disabled) {
+    if (disabled) {
       return colors.GREY;
     } else {
-      return colors.PRIMARY_BLUE;
+      if ($isDeleteVariant) {
+        return colors.ERROR;
+      } else {
+        return colors.PRIMARY_BLUE;
+      }
     }
   }};
   color: white;

@@ -1,10 +1,8 @@
 import { InputProps } from "./types";
-import "./styles";
-import { error } from "console";
 import {
   InputWrapper,
+  InputComponent,
   InputLabel,
-  InputContent,
   ErrorContainer,
 } from "./styles";
 
@@ -14,15 +12,15 @@ function Input({
   type = "text",
   placeholder,
   label,
-  disabled,
-  error,
+  disabled = false,
+  error = undefined,
   value,
   onChange,
 }: InputProps) {
   return (
     <InputWrapper>
       <InputLabel htmlFor={id}>{label}</InputLabel>
-      <InputContent
+      <InputComponent
         id={id}
         name={name}
         type={type}
@@ -32,7 +30,7 @@ function Input({
         value={value}
         onChange={onChange}
       />
-      <ErrorContainer></ErrorContainer>
+      <ErrorContainer>{error}</ErrorContainer>
     </InputWrapper>
   );
 }
