@@ -5,6 +5,7 @@ import Input from "components/Input/Input";
 import Button from "components/Button/Button";
 
 import { ContactUsFormContainer, Title, InputsContainer } from "./styles";
+import {CONTACT_US_FORM_NAMES} from "./types";
 
 function ContactUs() {
   const validationSchema = Yup.object().shape({
@@ -17,7 +18,6 @@ function ContactUs() {
       .min(4, "Phone number must contain at least 4 digits")
       .max(20, "Phone number length exceeds 20 digits"),
     email: Yup.string()
-      .required("Email is required")
       .email("Invalid email format")
       .min(6, "The minimum email must contain 6 characters​")
       .max(60, "Email length exceeds 60 characters"),
@@ -25,13 +25,13 @@ function ContactUs() {
 
   const formik = useFormik({
     initialValues: {
-      fullName: "",
-      phone: "",
-      email: "",
+      fullName: '',
+      phone: '',
+      email: '',
     },
     validationSchema: validationSchema,
     validateOnChange: false,
-    onSubmit: (values, helpers) => {
+    onSubmit: (values) => {
       console.log(values);
     },
   });
@@ -68,7 +68,7 @@ function ContactUs() {
           onChange={formik.handleChange}
         />
       </InputsContainer>
-      <Button type="submit" name="contactFrom" />
+      <Button type="submit" name="SEND REQUEST" />
     </ContactUsFormContainer>
   );
 }

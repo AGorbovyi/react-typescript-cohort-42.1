@@ -32,24 +32,6 @@
 
 function Lesson_10 () {
 
-// const [uni, setUni] = useState<string | undefined>(undefined);
-// const [error, setError] = useState<string | undefined>(undefined);
-
-// const UNI_URL: string = "http://universities.hipolabs.com/search?country";
-
-
-//     return(    
-// <PageWrapper>
-//   <Form>
-//   <SearchField>
-//     <Input />
-//   </SearchField> 
-//   <ButtonComponent>
-// <Button />
-//   </ButtonComponent>
-//   <CardComponent></CardComponent>
-//   </Form>
-//   </PageWrapper>
 
 }
 

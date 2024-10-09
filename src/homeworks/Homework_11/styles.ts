@@ -10,5 +10,3 @@ export const PageWrapper = styled.div`
   padding: 40px;
   background-color: ${colors.PRIMARY_BLUE};
 `;
-
-
