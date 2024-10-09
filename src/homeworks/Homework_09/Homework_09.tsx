@@ -7,7 +7,7 @@
 // и при отвтете обновляется стейт с ошибкой или стейтом с полученными данными
 // 3. стили на ваши усмотрение
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import { PageWrapper, Card, Text, ContainerJokes } from "./styles";
 import Button from "components/Button/Button";
 
