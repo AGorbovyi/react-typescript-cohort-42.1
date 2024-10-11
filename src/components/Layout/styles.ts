@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link, NavLink } from "react-router-dom" 
+import { Link, NavLink } from "react-router-dom";
 
 import { colors } from "styles/colors";
 
@@ -26,6 +26,11 @@ export const HeaderLogo = styled.div`
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+`;
+
+export const LogoImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 export const HeaderNav = styled.nav`

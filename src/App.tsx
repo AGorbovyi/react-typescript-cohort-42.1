@@ -3,9 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import GlobalStyles from "styles/GlobalStyles";
 import Layout from "components/Layout/Layout";
 import Home from "pages/UserApp/Home/Home";
-import Login from "pages/UserApp/Login/Login";
 import About from "pages/UserApp/About/About";
+import Clients from "pages/UserApp/Clients/Clients";
+import FareLogix from "pages/UserApp/Clients/FareLogix/FareLogix";
+import HitchHiker from "pages/UserApp/Clients/HitchHiker/HitchHiker";
+import Lufthansa from "pages/UserApp/Clients/Lufthansa/Lufthnsa";
+
 import ContactUsPage from "pages/UserApp/ContactUsPage/ContactUsPage";
+import Login from "pages/UserApp/Login/Login";
+
 import { APP_ROUTES } from "сonstants/routes";
 
 
@@ -35,8 +41,13 @@ function App() {
         <Routes>
           <Route path={APP_ROUTES.HOME} element={<Home />} />
           <Route path={APP_ROUTES.ABOUT} element={<About />} />
+          <Route path={APP_ROUTES.CLIENTS} element={<Clients />} />
+          <Route path={APP_ROUTES.FARELOGIX} element={<FareLogix />} />
+          <Route path={APP_ROUTES.HITCHHIKER} element={<HitchHiker />} />
+          <Route path={APP_ROUTES.LUFTHANSA} element={<Lufthansa />} />
           <Route path={APP_ROUTES.CONTACT_US} element={<ContactUsPage />} />
           <Route path={APP_ROUTES.LOGIN} element={<Login />} />
+          <Route path={APP_ROUTES.NOT_FOUND} element="Page Is Not Found" />
         </Routes>
       </Layout>
       {/* <Lesson_06 /> */}
