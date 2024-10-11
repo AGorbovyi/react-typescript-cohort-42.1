@@ -1,0 +1,1 @@
+export { default as LH_logo } from "./LH_logo.jpg";
