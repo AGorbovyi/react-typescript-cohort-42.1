@@ -18,7 +18,7 @@ export const Title = styled.p`
   font-weight: normal;
 `;
 
-export const InputsContainer = styled.input`
+export const InputsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;

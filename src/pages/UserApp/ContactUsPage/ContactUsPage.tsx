@@ -5,7 +5,7 @@ function ContactUsPage() {
   return (
     <PageWrapper>
       <PageTitle>Contact us</PageTitle>
-      {/* <ContactUs /> */}
+      <ContactUs />
     </PageWrapper>
   );
 }
