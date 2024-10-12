@@ -17,7 +17,7 @@ import {
   FooterNav,
 } from "./styles";
 import { LayoutProps } from "./types";
-import { object } from "yup";
+import { LH_logo } from "assets";
 
 function Layout({ children }: LayoutProps) {
   const navigate = useNavigate();
@@ -28,10 +28,10 @@ function Layout({ children }: LayoutProps) {
 
   const appLinks = {
     [APP_ROUTES.HOME]: "Home",
-    [APP_ROUTES.CONTACT_US]: "Contact Us",
     [APP_ROUTES.ABOUT]: "About",
-    [APP_ROUTES.LOGIN]: "Login",
     [APP_ROUTES.CLIENTS]: "Clients",
+    [APP_ROUTES.CONTACT_US]: "Contact Us",
+    [APP_ROUTES.LOGIN]: "Login",
   };
 
   // console.log(Object.keys(appLinks));
@@ -64,7 +64,7 @@ function Layout({ children }: LayoutProps) {
     <LayoutWrapper>
       <AppHeader>
         <HeaderLogo onClick={goToHomePage}>
-          <LogoImg src={LH_logo} alt="Lufthansa Logo"/>
+          <LogoImg src={LH_logo} alt="Lufthansa Logo" />
         </HeaderLogo>
         <HeaderNav>
           {/* <HeaderLink

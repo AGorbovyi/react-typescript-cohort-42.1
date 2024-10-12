@@ -31,7 +31,7 @@ export const Client = styled.div`
 
 export const Logo = styled.img`
   width: 300px;
-  height: 100px;
+  height: 200px;
 `;
 
 export const BlockTitle = styled.div`
@@ -46,8 +46,4 @@ export const BlockText = styled.div`
   font-weight: 400;
   color: #777;
   font-size: 18px;
-`;
-
-export const ButtonControl = styled.div`
-  width: 200px;
 `;

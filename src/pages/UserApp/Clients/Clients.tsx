@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { APP_ROUTES } from "сonstants/routes";
+import { FareLogix_logo, HH_logo, LH_logo } from "assets";
 
 import Button from "components/Button/Button";
 
@@ -11,43 +12,38 @@ import {
   Logo,
   BlockTitle,
   BlockText,
-  ButtonControl,
 } from "./styles";
 
 function Clients() {
-  const navigate = useNavigate();
-
-  const goBack = () => {
-    navigate(-1);
-  };
 
   const fireLogix = {
     name: "FireLogix",
-    title: "Simpson",
-    description: "We are BERlogic GmbH is proud to receive a Preferred Partner certification from Farelogix. This recognition is proof of expertise in travel technology area. Delivering a high quality perfiormance of our API connectors, and prompt partner support is what outstands BERlogic on the in the travel technology market.",
-    // logoUrl: "./images/FareLogix_logo.png",
-    logoUrl: "https://www.berlogic.de/pr/images/tild3066-3034-4463-a465-623065366637__badge.png",
-    pageUrl: "./FireLogix/FireLogix.tsx",
+    title: "FireLogix",
+    description:
+      "We are BERlogic GmbH is proud to receive a Preferred Partner certification from Farelogix. This recognition is proof of expertise in travel technology area. Delivering a high quality perfiormance of our API connectors, and prompt partner support is what outstands BERlogic on the in the travel technology market.",
+    logoUrl: FareLogix_logo,
+    pageUrl: APP_ROUTES.FARELOGIX,
   };
 
   const hitchHiker = {
     name: "HitchHiker",
     title: "HitchHiker",
-    description: "HitchHiker GmbH is proud to announce the launch of a new strategic partnership with fulfillment provider to offer a high-quality access for HitchHiker partner-agencies.",
-    // logoUrl: "./images/HH_logo.png",
-    logoUrl:
-      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRdpqAYN1xSTccQ0SRx7p7pel7VRxFWMAx8UQaTK2pQhTh2v5cn",
-    pageUrl: "./HitchHiker/HitchHiker.tsx",
+    description:
+      "HitchHiker GmbH is proud to announce the launch of a new strategic partnership with fulfillment provider to offer a high-quality access for HitchHiker partner-agencies.",
+    logoUrl: HH_logo,
+    pageUrl: APP_ROUTES.HITCHHIKER,
   };
 
   const lufthansa = {
     name: "Lufthansa",
     title: "Lufthansa",
-    description: "We are proud to announce the launch a new strategic partnership with Lufthansa via Direct Connect technology. This partnership results of exclusive technical integrator for Lufthansa Group Inventory.",
-    logoUrl:
-      "https://banner2.cleanpng.com/20180806/vey/f2978465d3c3fc7949e6b3ae420f5bd1.webp",
-    pageUrl: "./Lufthansa/Luftnsa.tsx",
+    description:
+      "We are proud to announce the launch a new strategic partnership with Lufthansa via Direct Connect technology. This partnership results of exclusive technical integrator for Lufthansa Group Inventory.",
+    logoUrl: LH_logo,
+    pageUrl: APP_ROUTES.LUFTHANSA,
   };
+
+  const navigate = useNavigate();
 
   const goToFireLogixPage = () => {
     navigate(fireLogix.pageUrl);
@@ -80,9 +76,6 @@ function Clients() {
           <BlockText>{lufthansa.description}</BlockText>
         </Client>
       </Main>
-      <ButtonControl>
-        <Button name="Go back" onClick={goBack} />
-      </ButtonControl>
     </PageWrapper>
   );
 }

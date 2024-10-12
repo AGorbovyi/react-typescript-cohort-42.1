@@ -29,6 +29,7 @@ import Lesson_08 from "lessons/Lesson_08/Lesson_08";
 import Lesson_09 from "lessons/Lesson_09/Lesson_09";
 import Lesson_10 from "lessons/Lesson_10/Lesson_10";
 import Lesson_11 from "lessons/Lesson_11/Lesson_11";
+import Lesson_13 from "lessons/Lesson_13/Lesson_13";
 
 //CONSULTATIONS
 // import Consultation_03 from "consultations/Consultation_03/Consultation_03";
@@ -37,6 +38,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
+
       <Layout>
         <Routes>
           <Route path={APP_ROUTES.HOME} element={<Home />} />
@@ -50,6 +52,7 @@ function App() {
           <Route path={APP_ROUTES.NOT_FOUND} element="Page Is Not Found" />
         </Routes>
       </Layout>
+
       {/* <Lesson_06 /> */}
       {/* <Homework_06 /> */}
       {/* <Lesson_07 /> */}
@@ -61,6 +64,7 @@ function App() {
       {/* <Homework_09 /> */}
       {/* <Lesson_11 /> */}
       {/* <Homework_11 /> */}
+      <Lesson_13 />
     </BrowserRouter>
   );
 }
