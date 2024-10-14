@@ -9,11 +9,14 @@ import FareLogix from "pages/UserApp/Clients/FareLogix/FareLogix";
 import HitchHiker from "pages/UserApp/Clients/HitchHiker/HitchHiker";
 import Lufthansa from "pages/UserApp/Clients/Lufthansa/Lufthnsa";
 
+import EmployeeLayout from "pages/EmployeeApp/components/EmployeeLayout/EmployeeLayout";
+import EmployeeForm from "pages/EmployeeApp/components/EmployeeForm/EmployeeForm";
+import EmployeeCard from "pages/EmployeeApp/components/EmployeeCard/EmployeeCard";
+
 import ContactUsPage from "pages/UserApp/ContactUsPage/ContactUsPage";
 import Login from "pages/UserApp/Login/Login";
 
-import { APP_ROUTES } from "сonstants/routes";
-
+import { APP_ROUTES, APP_EMPLOYEE_ROUTES } from "сonstants/routes";
 
 // HOMEWORKS
 import Homework_06 from "homeworks/Homework_06/Homework_06";
@@ -66,7 +69,18 @@ function App() {
       {/* <Lesson_11 /> */}
       {/* <Homework_11 /> */}
       {/* <Lesson_13 /> */}
-      <Homework_13 />
+      {/* <Homework_13 /> */}
+
+      <EmployeeLayout>
+        <Routes>
+          <Route path={APP_EMPLOYEE_ROUTES.FORM} element={<EmployeeForm />} />
+          <Route path={APP_EMPLOYEE_ROUTES.CARD} element={<EmployeeCard />} />
+          <Route
+            path={APP_EMPLOYEE_ROUTES.NOT_FOUND}
+            element="Page Is Not Found"
+          />
+        </Routes>
+      </EmployeeLayout>
     </BrowserRouter>
   );
 }

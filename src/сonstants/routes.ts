@@ -9,3 +9,9 @@ export enum APP_ROUTES {
     LUFTHANSA = "/clients/lufthansa", 
     NOT_FOUND = "*",
   }
+
+  export enum APP_EMPLOYEE_ROUTES {
+    FORM = "/form",
+    CARD = "/employee-card",
+    NOT_FOUND = "*",
+  }
