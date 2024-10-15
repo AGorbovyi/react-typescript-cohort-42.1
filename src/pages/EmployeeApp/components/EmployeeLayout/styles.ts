@@ -12,16 +12,19 @@ export const AppHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   height: 120px;
-  background-color: white;
-  border-bottom: 1px solid black;
+  background-color: #faf9ff;
+  border-bottom: 2px solid black;
   padding: 20px 40px;
   color: black;
 `;
 
 export const HeaderLogo = styled.div`
-  width: 80px;
-  height: 100%;
-  align-items: center;
+  position: relative;
+  left: 81px;
+  top: 47px;
+  width: 68px;
+  height: 24px;
+  /* align-items: center; */
   cursor: pointer;
 `;
 
