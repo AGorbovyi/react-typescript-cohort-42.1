@@ -1,9 +1,13 @@
-import { EmployeeCardContainer} from "./styles"
+import { EmployeeCardContainer, Print} from "./styles"
 
 function EmployeeCard(){
+    
     return(
 <EmployeeCardContainer>
-Valerian
+<Print>Name:</Print>
+<Print>Surname</Print>
+<Print>Age</Print>
+<Print>Job Posititon</Print>
 </EmployeeCardContainer>
 
     );
