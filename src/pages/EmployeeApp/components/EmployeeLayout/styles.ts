@@ -20,7 +20,7 @@ export const AppHeader = styled.header`
 
 export const HeaderLogo = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -53,4 +53,5 @@ export const Main = styled.main`
   flex: 1;
   background-color: #112233;
   justify-content: center;
+  color: white;  
 `;
