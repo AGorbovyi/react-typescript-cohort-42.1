@@ -14,7 +14,10 @@ export const InputWrapper = styled.div`
 
 export const InputLabel = styled.label`
   font-size: 16px;
-  color: hsl(0, 0%, 44%);
+  color: #6f6f6f;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
 `;
 
 export const InputComponent = styled.input<InputComponentStyleProps>`
@@ -27,21 +30,27 @@ export const InputComponent = styled.input<InputComponentStyleProps>`
       if ($error !== undefined) {
         return `2px solid ${colors.ERROR}`;
       } else {
-        return "1px solid #3f3f3f";
+        return "1px solid #3F3F3F";
       }
     }
   }};
   border-radius: 4px;
   padding: 12px;
+  gap: 3px;
   outline: none;
+  color: #1e1e1e;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
 
   &::placeholder {
     color: #6f6f6f;
     font-size: 16px;
+    font-family: "Lato", sans-serif;
   }
 `;
 
 export const ErrorContainer = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   color: ${colors.ERROR};
+  font-family: "Lato", sans-serif;
 `;
