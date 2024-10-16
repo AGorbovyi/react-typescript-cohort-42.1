@@ -11,10 +11,10 @@ function EmployeeForm() {
     <EmployeeFormContainer>
       <Title>Contact Us</Title>
       <InputContainer>
-        <Input id="" name="" placeholder="" label="Name*"/>
-        <Input id="" name="" placeholder="" label="Surname*"/>
-        <Input id="" name="" placeholder="" label="Age*"/>
-        <Input id="" name="" placeholder="QA"label="Job Position"/>
+        <Input id="" name="" placeholder="Enter your name" label="Name*"/>
+        <Input id="" name="" placeholder="Enter your surname" label="Surname*"/>
+        <Input id="" name="" placeholder="Enter your age" label="Age*"/>
+        <Input id="" name="" placeholder="Enter your job position"label="Job Position"/>
       </InputContainer>
       <Button type="submit" name="Create" />
     </EmployeeFormContainer>
