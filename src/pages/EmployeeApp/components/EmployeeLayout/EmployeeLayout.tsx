@@ -29,7 +29,7 @@ function EmployeeLayout({ children }: EmployeeLayoutProps) {
     return (
       <HeaderLink
         key={v4()}
-        style={({ isActive }: { isActive: boolean }) => ({
+        style={({ isActive }) => ({
           fontWeight: isActive ? "bold" : "normal",
           textDecoration: isActive ? "underline" : "none",
         })}
@@ -46,8 +46,6 @@ function EmployeeLayout({ children }: EmployeeLayoutProps) {
         <HeaderLogo onClick={goToEmployeeForm}>Logo</HeaderLogo>
         <HeaderNav>
           {headerLinks}
-          {/* <HeaderLink to="/">Form</HeaderLink> */}
-          {/* <HeaderLink to="/">Employee Card</HeaderLink> */}
         </HeaderNav>
       </AppHeader>
       <Main>{children}</Main>

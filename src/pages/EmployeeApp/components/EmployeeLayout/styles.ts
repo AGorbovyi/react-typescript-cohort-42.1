@@ -12,28 +12,36 @@ export const AppHeader = styled.header`
   justify-content: space-between;
   width: 100%;
   height: 120px;
-  background-color: #faf9ff;
-  border-bottom: 2px solid black;
+  background-color: white;
+  border-bottom: 1px solid black;
   padding: 20px 40px;
-  color: black;
+  color: black;  // NEED TO CHECK FIGMA
 `;
 
-export const HeaderLogo = styled.div`
-  position: relative;
-  left: 81px;
-  top: 47px;
-  width: 68px;
-  height: 24px;
+export const HeaderLogo = styled.div`     // NEED TO CHECK FIGMA
+  width: 80px;
+  height: 100%;
+  /* font-size: 30px;
+  font-weight: bold; */
   /* align-items: center; */
   cursor: pointer;
+`;
+
+export const LogoImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 export const HeaderNav = styled.nav`
   display: flex;
   color: white;
   font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;       // NEED TO CHECK FIGMA
   align-items: center;
+
+  gap: 30px;
+  height: 100%;
+
 `;
 
 export const HeaderLink = styled(NavLink)`
@@ -45,8 +53,8 @@ export const HeaderLink = styled(NavLink)`
 
 export const Main = styled.main`
   display: flex;
-  justify-content: center;
-  padding: 50px;
+  padding: 30px;
   flex: 1;
   background-color: #112233;
+  justify-content: center;
 `;
