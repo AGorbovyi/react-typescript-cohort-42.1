@@ -1,16 +1,26 @@
-import { EmployeeCardContainer, Print} from "./styles"
+import { EmployeeCardContainer, Print, Label, EmployeeData } from "./styles";
 
-function EmployeeCard(){
-    
-    return(
-<EmployeeCardContainer>
-<Print>Name:</Print>
-<Print>Surname</Print>
-<Print>Age</Print>
-<Print>Job Posititon</Print>
-</EmployeeCardContainer>
-
-    );
+function EmployeeCard() {
+  return (
+    <EmployeeCardContainer>
+      <Print>
+        <Label>Name</Label>
+        <EmployeeData>John</EmployeeData>
+      </Print>
+      <Print>
+        <Label>Surname</Label>
+        <EmployeeData>Johnson</EmployeeData>
+      </Print>
+      <Print>
+        <Label>Age</Label>
+        <EmployeeData>25</EmployeeData>
+      </Print>
+      <Print>
+        <Label>Job Position</Label>
+        <EmployeeData>QA</EmployeeData>
+      </Print>
+    </EmployeeCardContainer>
+  );
 }
 
 export default EmployeeCard;

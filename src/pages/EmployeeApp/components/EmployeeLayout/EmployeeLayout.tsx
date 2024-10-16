@@ -1,3 +1,8 @@
+import { v4 } from "uuid";
+import { useNavigate } from "react-router-dom";
+
+import { APP_EMPLOYEE_ROUTES } from "сonstants/routes";
+
 import {
   EmployeeLayoutWrapper,
   AppHeader,
@@ -6,12 +11,6 @@ import {
   HeaderLink,
   Main,
 } from "./styles";
-
-import { v4 } from "uuid";
-import { useNavigate } from "react-router-dom";
-
-import { APP_EMPLOYEE_ROUTES } from "сonstants/routes";
-
 import { EmployeeLayoutProps } from "./types";
 
 function EmployeeLayout({ children }: EmployeeLayoutProps) {
@@ -20,8 +19,8 @@ function EmployeeLayout({ children }: EmployeeLayoutProps) {
     navigate(APP_EMPLOYEE_ROUTES.FORM);
   };
   const appLinks = {
-    [APP_EMPLOYEE_ROUTES.FORM]: "Form",
-    [APP_EMPLOYEE_ROUTES.CARD]: "Card",
+    [APP_EMPLOYEE_ROUTES.FORM]: "Create Employee",
+    [APP_EMPLOYEE_ROUTES.CARD]: "Employees",
     // [APP_EMPLOYEE_ROUTES.NOT_FOUND]: "Not-found",
   };
 
@@ -43,10 +42,8 @@ function EmployeeLayout({ children }: EmployeeLayoutProps) {
   return (
     <EmployeeLayoutWrapper>
       <AppHeader>
-        <HeaderLogo onClick={goToEmployeeForm}>Logo</HeaderLogo>
-        <HeaderNav>
-          {headerLinks}
-        </HeaderNav>
+        <HeaderLogo onClick={goToEmployeeForm}>App Logo</HeaderLogo>
+        <HeaderNav>{headerLinks}</HeaderNav>
       </AppHeader>
       <Main>{children}</Main>
     </EmployeeLayoutWrapper>
