@@ -11,7 +11,7 @@ export enum APP_ROUTES {
   }
 
   export enum APP_EMPLOYEE_ROUTES {
-    FORM = "/form",
+    FORM = "/createEmployeeForm",
     CARD = "/employee-card",
     NOT_FOUND = "*",
   }
