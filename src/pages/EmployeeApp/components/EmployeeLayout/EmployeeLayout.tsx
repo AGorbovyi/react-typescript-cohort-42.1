@@ -1,5 +1,6 @@
 import { v4 } from "uuid";
 import { useNavigate } from "react-router-dom";
+import { useState, createContext } from "react";
 
 import { APP_EMPLOYEE_ROUTES } from "сonstants/routes";
 
@@ -11,9 +12,20 @@ import {
   HeaderLink,
   Main,
 } from "./styles";
-import { EmployeeLayoutProps } from "./types";
+import {
+  EmployeeLayoutProps,
+  UserDataProps,
+  EmployeeContextState,
+} from "./types";
+
+export const EmployeeContext = createContext<EmployeeContextState>({
+  userData: [],
+  setUserData: () => {},
+});
 
 function EmployeeLayout({ children }: EmployeeLayoutProps) {
+  const [userData, setUserData] = useState<UserDataProps[]>([]);
+
   const navigate = useNavigate();
   const goToEmployeeForm = () => {
     navigate(APP_EMPLOYEE_ROUTES.FORM);
@@ -40,13 +52,15 @@ function EmployeeLayout({ children }: EmployeeLayoutProps) {
   });
 
   return (
-    <EmployeeLayoutWrapper>
-      <AppHeader>
-        <HeaderLogo onClick={goToEmployeeForm}>App Logo</HeaderLogo>
-        <HeaderNav>{headerLinks}</HeaderNav>
-      </AppHeader>
-      <Main>{children}</Main>
-    </EmployeeLayoutWrapper>
+    <EmployeeContext.Provider value={{ userData, setUserData }}>
+      <EmployeeLayoutWrapper>
+        <AppHeader>
+          <HeaderLogo onClick={goToEmployeeForm}>App Logo</HeaderLogo>
+          <HeaderNav>{headerLinks}</HeaderNav>
+        </AppHeader>
+        <Main>{children}</Main>
+      </EmployeeLayoutWrapper>
+    </EmployeeContext.Provider>
   );
 }
 export default EmployeeLayout;

@@ -1,13 +1,24 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 import Input from "components/Input/Input";
 import Button from "components/Button/Button";
+import { APP_EMPLOYEE_ROUTES } from "сonstants/routes";
 
+import { EmployeeContext } from "pages/EmployeeApp/components/EmployeeLayout/EmployeeLayout"
+import  { UserDataProps } from "pages/EmployeeApp/components/EmployeeLayout/types"
 import { EmployeeFormContainer, InputContainer } from "./styles";
 import { EMPLOYEE_FORM_NAMES } from "./types";
 
 function EmployeeForm() {
+
+  const { setUserData } = useContext(EmployeeContext);
+
+  const navigate = useNavigate();
+
   const validationSchema = Yup.object().shape({
     [EMPLOYEE_FORM_NAMES.NAME]: Yup.string()
       .required("Name is required")
@@ -36,7 +47,11 @@ function EmployeeForm() {
     validationSchema: validationSchema,
     validateOnChange: false,
     onSubmit: (values) => {
-      console.log(values);
+      setUserData((prevValue:UserDataProps[]) => {
+        return[...prevValue, values]
+      });
+    
+      navigate(APP_EMPLOYEE_ROUTES.CARD);
     },
   });
 
