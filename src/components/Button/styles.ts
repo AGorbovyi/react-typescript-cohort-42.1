@@ -24,7 +24,7 @@ export const ButtonComponent = styled.button<ButtonComponentStyleProps>`
   }};
   color: white;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   border-radius: 4px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 `;
