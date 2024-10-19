@@ -36,3 +36,7 @@ export const EmployeeData = styled.div`
   text-align: left;
   color: #1c1c1c;
 `;
+
+export const NotFound = styled.div`
+color: white;
+`;

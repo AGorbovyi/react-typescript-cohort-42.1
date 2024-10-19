@@ -45,7 +45,6 @@ export const InputComponent = styled.input<InputComponentStyleProps>`
   &::placeholder {
     color: #6f6f6f;
     font-size: 16px;
-    font-family: "Lato", sans-serif;
   }
 `;
 

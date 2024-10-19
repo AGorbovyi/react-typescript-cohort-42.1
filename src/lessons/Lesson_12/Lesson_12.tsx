@@ -2,7 +2,7 @@ import LoginForm from "components/LoginForm/LoginForm";
 
 import { PageWrapper } from "./styles";
 
-function Lesson_11() {
+function Lesson_12() {
   return (
     <PageWrapper>
 
@@ -10,4 +10,4 @@ function Lesson_11() {
   );
 }
 
-export default Lesson_11;
+export default Lesson_12;
