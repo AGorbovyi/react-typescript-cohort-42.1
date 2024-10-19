@@ -14,11 +14,11 @@ function EmployeeCard() {
       <EmployeeCardContainer>
         <Print>
           <Label>Name</Label>
-          <EmployeeData>{employee.name}</EmployeeData>
+          <EmployeeData>{employee.firstName}</EmployeeData>
         </Print>
         <Print>
           <Label>Surname</Label>
-          <EmployeeData>{employee.surname}</EmployeeData>
+          <EmployeeData>{employee.lastName}</EmployeeData>
         </Print>
         <Print>
           <Label>Age</Label>
