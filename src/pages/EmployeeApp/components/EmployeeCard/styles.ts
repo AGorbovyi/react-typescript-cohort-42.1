@@ -1,5 +1,11 @@
 import styled from "@emotion/styled";
 
+export const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+`;
+
 export const EmployeeCardContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,6 +16,7 @@ export const EmployeeCardContainer = styled.div`
   padding: 60px;
   background-color: #ffffff;
 `;
+
 export const Print = styled.p`
   display: flex;
   flex-direction: column;
@@ -38,5 +45,5 @@ export const EmployeeData = styled.div`
 `;
 
 export const NotFound = styled.div`
-color: white;
+  color: white;
 `;
