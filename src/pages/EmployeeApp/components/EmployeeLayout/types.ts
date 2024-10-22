@@ -5,9 +5,9 @@ export interface EmployeeLayoutProps {
 }
 
 export interface UserDataProps {
-  name: string;
-  surname: string;
-  age: number;
+  firstName: string;
+  lastName: string;
+  age: string;
   jobPosition: string;
 }
 
